@@ -1,33 +1,30 @@
 <?php
 
-function sosu($n){
+function primeNumber($n){
 
-$x=2;
-$z=0;
-$y=1;
+    $x = 2;
+    $z = 0;
+    $y = 1;
 
-    while($x<$n){
-        $z=$n%$x;
+    while($x < $n){
+        $z = $n % $x;
         ++$x;
 
-if ($z == 0) {
-
-  $y=0;
-  break;  
+        if ($z == 0){
+            $y = 0;
+            break;  
   
-  }
-}
+        }
+     }
    
-if($y==0 || $n == 0 || $n == 1){
-
-echo "素数じゃない!";
-}
-else {
-    echo "素数だよ?!";
-  }
+    if($y == 0 || $n == 0 || $n == 1){
+        echo "This is prime number";
+    } else {
+        echo "This is not prime number";
+    }
 }
 
 
-sosu(2);
+primeNumber(2);
 
 ?>

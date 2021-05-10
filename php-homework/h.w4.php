@@ -4,23 +4,24 @@ function primeNumber($n){
 
     $x = 2;
     $z = 0;
-    $y = 1;
+    $isPrimeNumber=true;
 
+    if($n == 0 || $n == 1){
+        $isPrimeNumber=false;
+    }elseif($n == 2){
+        return true;
+    }
+       
     while($x < $n){
         $z = $n % $x;
-        ++$x;
+        $x++;
 
         if ($z == 0){
-            $y = 0;
-            break;  
-  
+            $isPrimeNumber=false;
+            break; 
+        }else{
+            return true;
         }
-    }
-   
-    if($y == 0 || $n == 0 || $n == 1){
-        return false;
-    } else {
-        return true;
     }
 }
 

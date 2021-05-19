@@ -59,7 +59,7 @@ class LinkedList {
         }
     }
 
-    public function deleteFirst($data) {
+    public function deleteAll($data) {
     if ($this->head == null) { 
         echo "List is empty.";
         return;
@@ -94,6 +94,6 @@ $list->insert(3);
 
 $list->visit();
 
-$list->deleteFirst(2);
+$list->deleteAll(2);
 $list->visit();
 

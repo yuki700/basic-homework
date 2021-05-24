@@ -26,7 +26,7 @@ class Node {
         $this->next = $next;
     }
     
-} 
+}
 
 class LinkedList { 
     
@@ -35,15 +35,12 @@ class LinkedList {
     public function insert($data) {
         $newNode = new Node($data); 
         if ($this->head == null) {
-            
             $this->head = $newNode;
         } else {
-
             $last = $this->head; 
             while ($last->getNext() != null) { 
                 $last = $last->getNext();
             }
-
             $last->setNext($newNode);
         }
     }
@@ -74,10 +71,6 @@ class LinkedList {
         }
 		$this->head =$preNode;
     }
-
-
-   
-
 }
 
 $list = new LinkedList();

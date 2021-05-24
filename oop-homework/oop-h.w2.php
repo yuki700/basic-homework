@@ -14,17 +14,17 @@ abstract class Emailer{
 
     public function addRecipients($recipient){
         array_push($this->recipients, $recipient);
-        return;
+        return $this;
     }
 
     public function setSubject($subject){
         $this->subject = $subject;
-        return;
+        return  $this;
     }
 
     public function setBody($body){
         $this->body = $body;
-        return;
+        return  $this;
     }
 }
 

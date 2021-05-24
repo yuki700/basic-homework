@@ -60,13 +60,13 @@ class LinkedList {
     }
 
     public function deleteFirst($data) {
-    if ($this->head == null) { 
-        echo "List is empty.";
-        return;
-    }
-    while ($this->head->getData() == $data) { 
-        $this->head = $this->head->getNext();
-    }
+        if ($this->head == null) { 
+            echo "List is empty.";
+            return;
+        }
+        while ($this->head->getData() == $data) { 
+            $this->head = $this->head->getNext();
+        }
 
         $current = $this->head;
 

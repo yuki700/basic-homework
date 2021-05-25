@@ -87,15 +87,19 @@ class BinaryTree {
     private function _minmumfind($node) {
         $current = $node ;
 
-        if($node->getLeft() == null){
-            return $node;
-        }    
-
-        elseif($node->getLeft()) {
-            $current = $node->getLeft();
-            $this->_minmumfind($node->getLeft());  
-            echo "minmum number is ". $node->getData(). "\n";           
+        while(!$current->getLeft() == null) {
+            $current = $current->getLeft();            
         } 
+        echo "minmum number is ". $current->getData(). "\n";
+    }
+
+    private function _maxfind($node) {
+        $current = $node ;
+
+        while(!$current->getright() == null) {
+            $current = $current->getright();            
+        } 
+        echo "max number is ". $current->getData(). "\n";
     }
 }
 
@@ -139,11 +143,11 @@ class SearchBinaryTree extends BinaryTree {
 	}
 }
 
-$arr = array(8,3,1,6,4,7,10,14,13);
+$arr = array(10, 5, 19, 1, 6, 17);
 
 $tree = new SearchBinaryTree();
 for($i=0,$n=count($arr);$i<$n;$i++) {
    $tree->insert($arr[$i]);
 }
-echo "\nShow SBT preorder: \n"; 
-$tree->find('minmum'); // 1 3 4 6 7 8 10 13 14 
+$tree->find('minmum'); 
+$tree->find('max');

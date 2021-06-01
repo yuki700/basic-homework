@@ -60,23 +60,22 @@ class BinaryTree {
     public function addNodeToTree($newNode){
         $array = array($this->getRoot());
 
-        while(true){
+        while($k == 0){
+            $k = 1;
 
             if($array[0]->getLeft() != null){
                 array_push($array, $array[0]->getLeft());
-
+                $k = 0;
                        
             } else {
                 $array[0]->setLeft($newNode);
-                break;
             }
 
             if($array[0]->getRight()!= null){
                 array_push($array, $array[0]->getRight());
-
+                $k = 0;
             } else {
                 $array[0]->setRight($newNode);
-                break;
             } 
             array_shift($array);
         }

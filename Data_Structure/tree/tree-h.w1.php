@@ -115,29 +115,28 @@ class SearchBinaryTree extends BinaryTree {
 
 			$current = $this->root;
 
-			while(true) {
+			while($k == 0) {
+                $k = 1;
 
-					if($data < $current->getData()) {
-					
-						if($current->getLeft()) {
-							$current = $current->getLeft();
-						} else {
-							$current->setLeft(new Node($data));
-							break; 
-						}
+                if($data <= $current->getData()) {
+                
+                    if($current->getLeft()) {
+                        $current = $current->getLeft();
+                        $k = 0;
+                    } else {
+                        $current->setLeft(new Node($data));
+                    }
 
-					} else if($data > $current->getData()){
+                } else if($data > $current->getData()){
 
-						if($current->getRight()) {
-							$current = $current->getRight();
-						} else {
-							$current->setRight(new Node($data));
-							break; 
-						}
+                    if($current->getRight()) {
+                        $current = $current->getRight();
+                        $k = 0;
+                    } else {
+                        $current->setRight(new Node($data)); 
+                    }
 
-					} else {
-						break;
-					}
+                } 
 			} 
 		}
 	}

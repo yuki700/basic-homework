@@ -19,12 +19,14 @@ abstract class Emailer{
 
     public function setSubject($subject){
         $this->subject = $subject;
-        return  $this;
+      
+        return $this;
     }
 
     public function setBody($body){
         $this->body = $body;
-        return  $this;
+
+        return $this;
     }
 }
 

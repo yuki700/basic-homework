@@ -15,8 +15,6 @@ function bubbleSort(&$arr) {
 } 
    
 $arr = array(5, 3, 1, 9, 8, 2, 4, 7); 
-  
-$len = sizeof($arr); 
 bubbleSort($arr); 
   
 echo "the largest pair sum : \n"; 

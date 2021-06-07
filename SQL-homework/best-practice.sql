@@ -5,12 +5,12 @@
 
 SELECT 
   working_area,
-  AVG(commission),
-  COUNT(agent_name) 
+  AVG(commission) AS average_commision,
+  COUNT(agent_name) AS count_agent_name
 FROM 
   agents
 GROUP BY 
-  working_area
+  1
 HAVING 
   COUNT(agent_name)<3 --  do not group areas with 3 or more people.
 ORDER BY 

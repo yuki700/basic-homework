@@ -172,6 +172,7 @@ input {
     width: 320px;
     top: 55px;
     right: 20px;
+    text-align:center;
 }
 
 #login input {
@@ -186,15 +187,15 @@ input {
 #login button {
     font-family: Montserrat-Bold;
     font-size: 15px;
-    color: #fff;
+    color: rgb(252, 249, 249);
     text-transform: uppercase;
     width: 68%;
     height: 50px;
     border-radius: 25px;
     background: #57b846;
-    margin-right: 50px;
     margin-top: 20px;
     border: none;
+    text-align: center;
 }
 
 #login button:hover {

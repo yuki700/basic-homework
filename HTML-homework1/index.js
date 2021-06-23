@@ -19,14 +19,15 @@ document.addEventListener('mouseup', (e) => {
     const form = document.getElementById('login');
     console.log(e.target);
     console.log(e.target.innerText);
-    console.log(e);
-    console.log(document.getElementById('login'));
-    console.log(typeof(form));
+    // console.log(e);
+    // console.log(document.getElementById('login'));
+    // console.log(typeof(form));
     if (!form) { return; }
     
-    if (!form.contains(e.target) && !e.target.innerText.toLowerCase().includes('login')) {
+    if (!form.contains(e.target) && !'login'.includes(e.target.innerText.toLowerCase())) {
         form.style.display = '';
     }
+    // console.log(e.target.id);
 });
 
 function showLoginForm() {

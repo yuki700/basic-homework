@@ -24,7 +24,7 @@ document.addEventListener('mouseup', (e) => {
     console.log(typeof(form));
     if (!form) { return; }
     
-    if (!form.contains(e.target) && !e.target.innerText.toLowerCase().includes('login')) {
+    if (!form.contains(e.target) && !'login'.includes(e.target.innerText.toLowerCase())) {
         form.style.display = '';
     }
 });

@@ -1,0 +1,108 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet", href="index.css" />
+        <meta charset="utf-8">
+        <title>My web page</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <script src="index.js"></script>
+      </head>
+    
+    <header >
+        <div id="logo">The logo</div>
+        <div id="slogan" class="slogan">The header slogan</div>
+        <div>
+            <div id="form">
+                <ul>
+                    <li>Hi <span style="color:#080; font-weight:700">Guest</span></li>
+                    <li><a href="javascript:void(0)" onclick="showLoginForm()">Login</a></li>
+                </ul>
+            </div>
+            <form id="login">
+				<input type="text" name="username" placeholder="User name" />
+				<input type="password" name="password" placeholder="Password"/>
+				<label><input type="checkbox" name="rememberUsername" />Remember user name </label>
+				<button type="submit" name="Login"value="1">Login</button>
+			</form>
+
+            <div id="search">
+                <form method="GET">
+                    <input type="text" name="keyword" />
+                    <i class="material-icons">search</i>
+                </form>
+            </div>
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li>Menu 1</li>
+            <li>Menu 2</li>
+            <li>Menu 3</li>
+            <li>Menu 4</li>
+        </ul>
+    </nav>
+    
+    <div id="main" style="background-color: rgb(239, 247, 239); height: 400px;">
+        <div id="main-content">
+            <h3> USERS</h3>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Fullname</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Doloremque Laudantium</td>
+                    <td>doloremque</td>
+                    <td>doloremque@example.com</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Nemo enim</td>
+                    <td>nemo</td>
+                    <td>nemo@example.com</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Adipisci Velit</td>
+                    <td>adipisci</td>
+                    <td>adipisci velit@example.com</td>
+                </tr>
+            </table>
+            
+        </div>
+        <div id="sidebar">
+            <h3> Sidebar </h3>
+            <ul>
+                <li>Feature 1</li>
+                <li>Feature 2</li>
+                <li>Feature 3</li>
+                <li>Feature 4</li>
+                <li>Feature 5</li>
+                <li>Feature 6</li>
+            </ul>
+        </div>
+    </div>
+    
+    <footer>
+        <ol>
+            <li>Extra info 1</li>
+            <li>Extra info 1</li>
+        </ol>
+        <h3> The footer</h3>
+        <div id="scroll">
+            <a href="javascript:void(0);" onclick="scrollToTop()">
+                <i class="material-icons">arrow_drop_up</i>
+            </a>
+            
+        </div>
+    
+    </footer>
+    
+    
+</html>
+
